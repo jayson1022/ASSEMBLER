@@ -1,5 +1,6 @@
 import csv
-
+#JAYSON ROSARIO LOPEZ 
+#MATRICULA 18-1597
 def cargar_productos(ruta_archivo):
     productos = []
     try:
@@ -32,18 +33,12 @@ def mostrar_productos(productos):
         print(f"Producto: {producto['nombre']}, Precio Original: {producto['precio']}, "
               f"Descuento: {producto['descuento']}%, Precio con Descuento: {producto.get('precio_con_descuento', 'N/A')}")
 
-# Ruta del archivo CSV
 ruta_archivo = 'productos.csv'
-
-# Cargar los productos
 productos = cargar_productos(ruta_archivo)
 
-# Calcular y mostrar el precio promedio
 precio_promedio = calcular_precio_promedio(productos)
 print(f"Precio promedio de los productos: {precio_promedio:.2f}")
 
-# Aplicar descuentos
 aplicar_descuentos(productos)
 
-# Mostrar productos con descuentos aplicados
 mostrar_productos(productos)
